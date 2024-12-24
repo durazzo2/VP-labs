@@ -35,5 +35,15 @@
     </form>
     <a th:href="@{/songs/add-form}" >Add song</a>
 </main>
+<div>
+    <h1>Songs</h1>
+    <table>
+        <!-- Табела со податоци -->
+    </table>
+    <div th:if="${#authorization.expression('hasRole(''ADMIN'')')}">
+        <a th:href="@{/songs/add}">Add Song</a>
+    </div>
+</div>
+
 </body>
 </html>
